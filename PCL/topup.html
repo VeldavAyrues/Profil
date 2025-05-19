@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Day Robux Top-Up</title>
+    <style>
+        :root {
+            --neon-blue: #00f2ff;
+            --dark-blue: #0066ff;
+            --black: #000000;
+            --white: #ffffff;
+            --gray: #1a1a1a;
+            --light-gray: #2a2a2a;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: var(--neon-blue);
+            font-size: 2.5rem;
+            text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .pricing-card {
+            background: linear-gradient(145deg, var(--gray), var(--light-gray));
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--light-gray);
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 242, 255, 0.2);
+            border: 1px solid var(--neon-blue);
+        }
+        
+        .card-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .robux-amount {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--neon-blue);
+            margin: 10px 0;
+        }
+        
+        .days {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .price {
+            font-size: 1.8rem;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+        
+        .features li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--light-gray);
+            color: #ccc;
+        }
+        
+        .features li:last-child {
+            border-bottom: none;
+        }
+        
+        .features li::before {
+            content: "✓";
+            color: var(--neon-blue);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .btn-buy {
+            background: linear-gradient(90deg, var(--dark-blue), var(--neon-blue));
+            color: var(--black);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-buy:hover {
+            background: linear-gradient(90deg, var(--neon-blue), var(--dark-blue));
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .popular-tag {
+            background-color: var(--neon-blue);
+            color: var(--black);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .payment-methods {
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        .payment-methods h2 {
+            color: var(--neon-blue);
+            margin-bottom: 20px;
+        }
+        
+        .payment-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .payment-icon {
+            width: 60px;
+            height: 40px;
+            background-color: var(--light-gray);
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ROBUX TOP-UP</h1>
+            <p class="subtitle">5-Day Premium Packages with Instant Delivery</p>
+        </header>
+        
+        <div class="pricing-grid">
+            <!-- Package 1 -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <div class="popular-tag">MOST POPULAR</div>
+                    <div class="robux-amount">50 Robux</div>
+                    <div class="days">5 Days</div>
+                    <div class="price">Rp8.500</div>
+                </div>
+                <ul class="features">
+                    <li>Instant Delivery</li>
+                    <li>Create Gamepass</li>
+                    <li>24/7 Support</li>
+                    <li>Secure Payment</li>
+                </ul>
+                <a href="https://wa.me/6282124066210?text=Hi%20admin,%20saya%20ingin%20membeli%20produk%20anda%0AProduk%20:%20Robux%0AJumlah%20%20%20:%2050-Robux%0AHarga%20%20:%20Rp8.500%0AMohon%20jawabannya%20ya"><button class="btn-buy">Buy Now</button>
+                </a>
+            </div>
+            
+            <!-- Package 2 -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <div class="robux-amount">100 Robux</div>
+                    <div class="days">5 Days</div>
+                    <div class="price">Rp15.500</div>
+                </div>
+                <ul class="features">
+                    <li>Instant Delivery</li>
+                    <li>Create Gamepass</li>
+                    <li>24/7 Support</li>
+                    <li>Secure Payment</li>
+                </ul>
+                <a href="https://wa.me/6282124066210?text=Hi%20admin,%20saya%20ingin%20membeli%20produk%20anda%0AProduk%20:%20Robux%0AJumlah%20%20%20:%20100-Robux%0AHarga%20%20:%20Rp15.500%0AMohon%20jawabannya%20ya"><button class="btn-buy">Buy Now</button>
+                </a>
+            </div>
+            
+            <!-- Package 3 -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <div class="robux-amount">150 Robux</div>
+                    <div class="days">5 Days</div>
+                    <div class="price">Rp22.650</div>
+                </div>
+                <ul class="features">
+                    <li>Instant Delivery</li>
+                    <li>Create Gamepass</li>
+                    <li>24/7 Support</li>
+                    <li>Secure Payment</li>
+                </ul>
+                <a href="https://wa.me/6282124066210?text=Hi%20admin,%20saya%20ingin%20membeli%20produk%20anda%0AProduk%20:%20Robux%0AJumlah%20%20%20:%20150-Robux%0AHarga%20%20:%20Rp22.650%0AMohon%20jawabannya%20ya"><button class="btn-buy">Buy Now</button>
+                </a>
+            </div>
+            
+            <!-- Package 3 -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <div class="robux-amount">200 Robux</div>
+                    <div class="days">5 Days</div>
+                    <div class="price">Rp29.800</div>
+                </div>
+                <ul class="features">
+                    <li>Instant Delivery</li>
+                    <li>Create Gamepass</li>
+                    <li>24/7 Support</li>
+                    <li>Secure Payment</li>
+                </ul>
+                <a href="https://wa.me/6282124066210?text=Hi%20admin,%20saya%20ingin%20membeli%20produk%20anda%0AProduk%20:%20Robux%0AJumlah%20%20%20:%20200-Robux%0AHarga%20%20:%20Rp29.800%0AMohon%20jawabannya%20ya"><button class="btn-buy">Buy Now</button>
+                </a>
+            </div>
+            
+            <!-- Package 1000 -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <div class="popular-tag">BEST VALUE</div>
+                    <div class="robux-amount">10000 Robux</div>
+                    <div class="days">5 Days</div>
+                    <div class="price">Rp1.500.000</div>
+                </div>
+                <ul class="features">
+                    <li>Instant Delivery</li>
+                    <li>Premium Bonus</li>
+                    <li>24/7 Support</li>
+                    <li>Secure Payment</li>
+                    <li>Exclusive Items</li>
+                    <li>VIP Support</li>
+                </ul>
+                <a href="https://wa.me/6282124066210?text=Hi%20admin,%20saya%20ingin%20membeli%20produk%20anda%0AProduk%20:%20Robux%0AJumlah%20%20%20:%2010000-Robux%0AHarga%20%20:%20Rp1.500.000%0AMohon%20jawabannya%20ya"><button class="btn-buy">Buy Now</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="payment-methods">
+            <h2>Payment Methods</h2>
+            <div class="payment-icons">
+                <div class="payment-icon">Gopay</div>
+                <div class="payment-icon">Dana</div>
+                <div class="payment-icon">OVO</div>
+                <div class="payment-icon">QRIS</div>
+                <div class="payment-icon">CASH</div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 AyruesID Top-Up Service. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

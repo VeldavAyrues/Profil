@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricelist Produk - Privates Server Card</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .pricelist-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .pricing-card {
+            background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            width: 280px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #333;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 162, 255, 0.4);
+            border: 1px solid #00aeff;
+        }
+
+        .pricing-card h2 {
+            color: #00aeff;
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(0, 174, 255, 0.5);
+        }
+
+        .price {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #ffffff;
+        }
+
+        .price span {
+            font-size: 16px;
+            color: #aaa;
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #333;
+            color: #ddd;
+        }
+
+        .features li:last-child {
+            border-bottom: none;
+        }
+
+        .features li::before {
+            content: "✓";
+            color: #00aeff;
+            margin-right: 10px;
+        }
+
+        .btn-buy {
+            background: linear-gradient(90deg, #0084ff, #00aeff);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 174, 255, 0.3);
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        .btn-buy:hover {
+            background: linear-gradient(90deg, #00aeff, #0084ff);
+            box-shadow: 0 6px 20px rgba(0, 174, 255, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .badge {
+            background-color: #00aeff;
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+            text-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="pricelist-container">
+        <!-- Card 1 -->
+        <div class="pricing-card">
+            <div class="badge">POPULAR</div>
+            <h2>Blox Fruit</h2>
+            <div class="price">Rp 25.000 <span>/ bulan</span></div>
+            <ul class="features">
+                <li>Private Server (private)</li>
+                <li>Server bukan Sharing</li>
+                <li>Mendapatkan Full Akses PS</li>
+                <li>Join Melalui Link</li>
+            </ul>
+            <a href="https://wa.me/6282124066210?text=Hi%20admin,%20saya%20ingin%20membeli%20produk%20anda%0AProduk%20:%20Private%20Server%0AJenis%20%20%20:%20BloxFruit%0AHarga%20%20:%20Rp25.000%0AMohon%20jawabannya%20ya"><button class="btn-buy">Pesan Sekarang</button>
+            </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="pricing-card">
+            <h2>SCP 3008</h2>
+            <div class="price">Rp 35.000 <span>/ bulan</span></div>
+            <ul class="features">
+                <li>Private Server (private)</li>
+                <li>Server bukan Sharing</li>
+                <li>Mendapatkan Akses Admin</li>
+                <li>Bermain tanpa di ganggu</li>
+                <li>Login Melalui Akun PS</li>
+            </ul>
+            <a href="https://wa.me/6282124066210?text=Hi%20admin,%20saya%20ingin%20membeli%20produk%20anda%0AProduk%20:%20Private%20Server%0AJenis%20%20%20:%20SCP%203008%0AHarga%20%20:%20Rp35.000%0AMohon%20jawabannya%20ya"><button class="btn-buy">Pesan Sekarang</button>
+            </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="pricing-card">
+            <div class="badge">BEST VALUE</div>
+            <h2>Custom Private Server</h2>
+            <div class="price">Harga Menyesuaikan <span>/ bulan</span></div>
+            <ul class="features">
+                <li>Request Game Private Server</li>
+                <li>Bebas Nominal Robux</li>
+                <li>Harga Menyesuaikan</li>
+                <li>Bermain tanpa di ganggu</li>
+                <li>Bermain Khusus Bersama Teman</li>
+                <li>Server Eksklusif</li>
+            </ul>
+            <a href="https://wa.me/6282124066210?text=Hi%20admin,%20saya%20ingin%20membeli%20produk%20anda%0AProduk%20:%20Private%20Server%0AJenis%20%20%20:%20Custom%0AHarga%20%20:%20Menyesuaikan%0AMohon%20jawabannya%20ya"><button class="btn-buy">Pesan Sekarang</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
