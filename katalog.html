@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog AyruesID</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+        }
+        
+        :root {
+            --primary: #6c5ce7;
+            --secondary: #a29bfe;
+            --dark: #2d3436;
+            --light: #f5f6fa;
+            --accent: #fd79a8;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+        
+        /* Gaming-inspired Navbar */
+        .navbar {
+            background: rgba(44, 44, 66, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            color: var(--primary);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        /* Hero Section with Gaming Vibe */
+        .hero {
+            height: 100vh;
+            background: 
+                linear-gradient(135deg, rgba(44, 44, 66, 0.9) 0%, rgba(29, 29, 51, 0.95) 100%),
+                url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .hero h1 span {
+            color: var(--accent);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero h1 span:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            bottom: 5px;
+            left: 0;
+            background: var(--primary);
+            z-index: -1;
+            opacity: 0.7;
+        }
+        
+        .hero p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(108, 92, 231, 0.6);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        /* Floating Game Characters */
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .floating-element {
+            position: absolute;
+            opacity: 0.7;
+            animation: float 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+        
+        /* Game Categories Section */
+        .categories {
+            padding: 5rem 10%;
+            background: var(--light);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            bottom: -10px;
+            left: 25%;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .category-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .category-info {
+            padding: 1.5rem;
+        }
+        
+        .category-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .category-count {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Featured Games Section */
+        .featured {
+            padding: 5rem 10%;
+            background: #f0f1f5;
+        }
+        
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .featured-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .featured-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .featured-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .featured-info {
+            padding: 1.5rem;
+        }
+        
+        .featured-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .featured-platform {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .platform-icon {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: #666;
+        }
+        
+        .featured-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        
+        .price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 10% 2rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background: var(--primary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem 5%;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 0 5%;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .cta-buttons {
+                justify-content: center;
+            }
+            
+            .categories, .featured {
+                padding: 3rem 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">🎮</div>
+            <div class="logo-text">AyruesID</div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Game</a></li>
+            <li><a href="#">Konsol</a></li>
+            <li><a href="#">Aksesoris</a></li>
+            <li><a href="#">Tentang</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Selamat Datang di <span>AyruesID</span> - Surga Para Gamer</h1>
+            <p>Temukan Produk game Favoritmu di platform ini. Dapatkan harga terbaik dengan Diskon resmi dan bonus eksklusif untuk Anda!</p>
+            <div class="cta-buttons">
+                <a href="index.html" class="btn btn-primary">Home</a>
+                <a href="https://whatsapp.com/channel/0029Vb2Rgai4yltHogiUS21Y" class="btn btn-secondary">Gabung Whatsapp</a>
+            </div>
+        </div>
+        
+        <div class="floating-elements">
+            <div class="floating-element" style="top: 20%; left: 70%; font-size: 3rem;">🕹️</div>
+            <div class="floating-element" style="top: 60%; left: 80%; font-size: 2.5rem;">🎯</div>
+            <div class="floating-element" style="top: 40%; left: 10%; font-size: 4rem;">👾</div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="section-header">
+            <h2 class="section-title">Kategori Game</h2>
+            <p class="section-subtitle">Temukan game favoritmu berdasarkan info di bawah</p>
+        </div>
+        
+        <div class="category-grid">
+            <div class="category-card">
+                <img src="https://cdn.discordapp.com/attachments/1370335787605954643/1373663200549011588/images_2.jpg?ex=682b3b0c&is=6829e98c&hm=b0462f022b5d73aed88f2608a7d70697efe828b6bc313e5cdf2654043c9d421a&" alt="Action" class="category-img">
+                <div class="category-info">
+                    <h3 class="category-title">Sandbox, MMO</h3>
+                    <p class="category-count">Roblox memiliki 8.228.760.226 akun, yang melampaui populasi manusia di dunia yang sekitar 8.21 miliar. </p>
+                </div>
+            </div>
+            
+            <div class="category-card">
+                <img src="https://cdn.discordapp.com/attachments/1370335787605954643/1373671571947913327/images_3.jpg?ex=682b42d8&is=6829f158&hm=6c7cf1c03ece87783117f5c35441c6a93bb72c0506d201646ed3366bb3929988&" alt="Adventure" class="category-img">
+                <div class="category-info">
+                    <h3 class="category-title">Game Sandbox 3D</h3>
+                    <p class="category-count">Minecraft adalah salah satu game terlaris sepanjang masa, dengan penjualan lebih dari 238 juta kopi. Ini juga memiliki basis pemain yang aktif dengan lebih dari 140 juta pemain setiap bulan. </p>
+                </div>
+            </div>
+            
+            <div class="category-card">
+                <img src="https://cdn.discordapp.com/attachments/1370335787605954643/1373673306611253369/images_4.jpg?ex=682b4475&is=6829f2f5&hm=3aae0065679e7921983baccff513f5b5c9a25c5572ba9765861357838d01bddf&" alt="Sports" class="category-img">
+                <div class="category-info">
+                    <h3 class="category-title">Esport</h3>
+                    <p class="category-count">Free Fire mengikuti format battle royale, di mana pemain bertarung hingga hanya tersisa satu pemain atau tim. </p></p>
+                </div>
+            </div>
+            
+            <div class="category-card">
+                <img src="https://cdn.discordapp.com/attachments/1370335787605954643/1373674993568841840/images_5.jpg?ex=682b4608&is=6829f488&hm=0f1cb79b47f50501ed250089e98e55ab255cfb7fd35d40a7760928c370581a8a&" alt="RPG" class="category-img">
+                <div class="category-info">
+                    <h3 class="category-title">Moba</h3>
+                    <p class="category-count">Mobile Legends memiliki basis pengguna aktif bulanan lebih dari 100 juta pemain di seluruh dunia. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Games Section -->
+    <section class="featured">
+        <div class="section-header">
+            <h2 class="section-title">Produk AyruesID</h2>
+            <p class="section-subtitle">Rilis terbaru yang wajib kamu ketahui</p>
+        </div>
+        
+        <div class="featured-grid">
+            <div class="featured-card">
+                <div class="featured-badge">BESTSELLER</div>
+                <img src="https://cdn.discordapp.com/attachments/1370335787605954643/1373703629264912485/20250518_234701.jpg?ex=682b60b3&is=682a0f33&hm=c4e19ea521fef8f918611123bfde8e3013467446de09a9606f9a0d9ce9cc710b&" alt="Game 1" class="featured-img">
+                <div class="featured-info">
+                    <h3 class="featured-title">NodeJS Hosting - Bot Node.Js</h3>
+                    <div class="featured-platform">
+                        <div class="platform-icon">Bot</div>
+                        <div class="platform-icon">Host</div>
+                        <div class="platform-icon">Panel</div>
+                    </div>
+                    <p>Hosting Bot yang dapat anda jalankan di Console panel dan di sambungkan ke WhatsApp.<br>Mulai Dari Rp3.000 saja, sudah bisa mendapatkan spesifikasi<br>Ram : 1GB<br>Cpu : 4vCore<br>Disk : 3GB<br><br>Buruan beli, harga murah sudah dapat spesifikasi bagus😆</p>
+                    <div class="featured-price">
+                        <span class="price">Rp 3.000</span>
+                        <a href="hostnodejs.html" class="btn btn-primary">Produk</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="featured-card">
+                <img src="https://images.unsplash.com/photo-1598550480910-8a9a5a6d178d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Game 2" class="featured-img">
+                <div class="featured-info">
+                    <h3 class="featured-title">Starfield</h3>
+                    <div class="featured-platform">
+                        <div class="platform-icon">XBOX</div>
+                        <div class="platform-icon">PC</div>
+                    </div>
+                    <p>Petualangan epik di antara bintang-bintang dari pencipta The Elder Scrolls.</p>
+                    <div class="featured-price">
+                        <span class="price">Rp 899.000</span>
+                        <a href="#" class="btn btn-primary">Beli</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="featured-card">
+                <div class="featured-badge">PRE-ORDER</div>
+                <img src="https://images.unsplash.com/photo-1608889825103-eb5a6f5ad5d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Game 3" class="featured-img">
+                <div class="featured-info">
+                    <h3 class="featured-title">Spider-Man 2</h3>
+                    <div class="featured-platform">
+                        <div class="platform-icon">PS5</div>
+                    </div>
+                    <p>Kembalinya Spider-Man dengan grafis next-gen dan gameplay yang lebih luas.</p>
+                    <div class="featured-price">
+                        <span class="price">Rp 999.000</span>
+                        <a href="#" class="btn btn-primary">Pre-Order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Tentang NEXUS</h3>
+                <p>Toko game terpercaya sejak 2010, menyediakan game original dengan garansi resmi untuk semua platform gaming.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">FB</a>
+                    <a href="#" class="social-link">IG</a>
+                    <a href="#" class="social-link">TW</a>
+                    <a href="#" class="social-link">YT</a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Link Cepat</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Game Terbaru</a></li>
+                    <li><a href="#">Pre-Order</a></li>
+                    <li><a href="#">Promo</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Bantuan</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Panduan Beli</a></li>
+                    <li><a href="#">Pengiriman</a></li>
+                    <li><a href="#">Garansi</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Kontak</h3>
+                <ul class="footer-links">
+                    <li>Jl. Gaming No. 123, Jakarta</li>
+                    <li>info@nexusgamestore.id</li>
+                    <li>(021) 1234-5678</li>
+                    <li>Buka 10:00 - 22:00</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 NEXUS Game Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Up Robux Roblox - Pembayaran Aman & Cepat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: black;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .logo {
+            width: 80px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .form-section {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .info-section {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #e60012;
+            margin-bottom: 20px;
+            font-size: 22px;
+            border-bottom: 2px solid #e60012;
+            padding-bottom: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .btn {
+            background-color: #e60012;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #c5000f;
+        }
+        
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .payment-method {
+            flex: 1;
+            min-width: 120px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .payment-method:hover {
+            border-color: #e60012;
+        }
+        
+        .payment-method img {
+            width: 60px;
+            height: auto;
+            margin-bottom: 5px;
+        }
+        
+        .contact-info {
+            margin-bottom: 25px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #e60012;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        
+        .steps {
+            margin-bottom: 25px;
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .step-number {
+            background-color: #e60012;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            border-radius: 0 0 8px 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://cdn.discordapp.com/attachments/1370335787605954643/1373663200549011588/images_2.jpg?ex=682b3b0c&is=6829e98c&hm=b0462f022b5d73aed88f2608a7d70697efe828b6bc313e5cdf2654043c9d421a&" alt="Roblox Logo" class="logo">
+            <h1>TOP UP ROBUX ROBLOX</h1>
+            <p>Isi formulir berikut untuk melakukan pembelian Robux Roblox</p>
+        </header>
+        
+        <div class="main-content">
+            <section class="form-section">
+                <h2>Formulir Pembelian</h2>
+                <form id="topupForm">
+                    <div class="form-group">
+                        <label for="roblox-id">ID Roblox Anda</label>
+                        <input type="text" id="roblox-id" name="roblox-id" placeholder="Masukkan ID Roblox Anda" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="roblox-username">Username Roblox</label>
+                        <input type="text" id="roblox-username" name="roblox-username" placeholder="Masukkan Username Roblox Anda" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="diamond-amount">Jumlah Robux</label>
+                        <select id="diamond-amount" name="diamond-amount" required>
+                            <option value="" disabled selected>Pilih Jumlah Robux</option>
+                            <option value="25">25 Robux - Rp 3.517</option>
+                            <option value="50">50 Robux - Rp 6.035</option>
+                            <option value="75">75 Robux - Rp 8.552</option>
+                            <option value="100">100 Robux - Rp 11.070</option>
+                            <option value="150">150 Robux - Rp 16.105</option>
+                            <option value="200">200 Robux - Rp 21.140</option>
+                            <option value="225">225 Robux - Rp 23.657</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="payment-method">Metode Pembayaran</label>
+                        <div class="payment-methods">
+                            <div class="payment-method">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Logo_ovo_purple.svg/1200px-Logo_ovo_purple.svg.png" alt="OVO">
+                                <p>OVO</p>
+                            </div>
+                            <div class="payment-method">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logo_dana_blue.svg/1200px-Logo_dana_blue.svg.png" alt="DANA">
+                                <p>DANA</p>
+                            </div>
+                            <div class="payment-method">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/LinkAja.svg/1200px-LinkAja.svg.png" alt="LinkAja">
+                                <p>LinkAja</p>
+                            </div>
+                            <div class="payment-method">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/BNI_logo.svg/1200px-BNI_logo.svg.png" alt="BNI">
+                                <p>Transfer BNI</p>
+                            </div>
+                        </div>
+                        <select id="payment-method" name="payment-method" required>
+                            <option value="" disabled selected>Pilih Metode Pembayaran</option>
+                            <option value="ovo">OVO</option>
+                            <option value="dana">DANA</option>
+                            <option value="linkaja">LinkAja</option>
+                            <option value="bni">Transfer Bank BNI</option>
+                            <option value="bri">Transfer Bank BRI</option>
+                            <option value="mandiri">Transfer Bank Mandiri</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="whatsapp">Nomor WhatsApp (Untuk Konfirmasi)</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="Contoh: 0821******" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Alamat Email</label>
+                        <input type="email" id="email" name="email" placeholder="Masukkan email aktif Anda" required>
+                    </div>
+                    
+                    <button type="submit" class="btn">Pesan Sekarang</button>
+                </form>
+            </section>
+            
+            <section class="info-section">
+                <h2>Informasi Kontak</h2>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p><a href="https://wa.me/6282124066210" target="_blank">0821-2406-6210</a> (Admin RobloxTopUp)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:ayruesid@gmail.com">support@ayrues.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">⏱️</div>
+                        <div>
+                            <h3>Jam Operasional</h3>
+                            <p>Setiap hari 08:00 - 22:00 WIB</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2>Cara Pembelian</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <h3>Isi Formulir</h3>
+                            <p>Lengkapi semua data yang diminta pada formulir pembelian</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <h3>Konfirmasi Pembayaran</h3>
+                            <p>Lakukan pembayaran sesuai nominal dan kirim bukti transfer ke WhatsApp kami</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <h3>Proses Top Up</h3>
+                            <p>Diamond akan diproses dalam 5-15 menit setelah pembayaran dikonfirmasi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div>
+                            <h3>Selesai</h3>
+                            <p>Robux akan masuk ke akun Roblox Anda dan Anda dapat mengeceknya di Gamepass</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2>Ketentuan Layanan</h2>
+                <ul style="padding-left: 20px; margin-bottom: 20px;">
+                    <li>Pastikan ID Roblox dan username yang dimasukkan benar</li>
+                    <li>Proses top up biasanya memakan waktu 5-15 menit setelah pembayaran dikonfirmasi</li>
+                    <li>Hubungi kami via WhatsApp jika robux belum masuk dalam 5 Hari</li>
+                    <li>Tidak ada pengembalian dana setelah pembayaran berhasil</li>
+                </ul>
+            </section>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 AyruesID - Layanan Top Up Robux Terpercaya</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.getElementById('topupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Ambil nilai dari form
+            const robloxId = document.getElementById('roblox-id').value;
+            const username = document.getElementById('roblox-username').value;
+            const diamondAmount = document.getElementById('diamond-amount').value;
+            const paymentMethod = document.getElementById('payment-method').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const email = document.getElementById('email').value;
+            
+            // Buat pesan WhatsApp
+            const whatsappMessage = `Halo Admin AyruesID, saya ingin membeli Robux 5Hari Roblox dengan detail berikut:%0A%0AID Roblox: ${robloxId}%0AUsername: ${username}%0AJumlah Robux: ${diamondAmount}%0AMetode Pembayaran: ${paymentMethod}%0ANomor WhatsApp: ${whatsapp}%0AEmail: ${email}`;
+            
+            // Redirect ke WhatsApp dengan pesan
+            window.open(`https://wa.me/6282124066210?text=${whatsappMessage}`, '_blank');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
